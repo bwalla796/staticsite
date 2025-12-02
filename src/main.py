@@ -51,7 +51,7 @@ def generate_pages(dir, basepath):
 
 def main():
     if len(sys.argv) > 0:
-        basepath = sys.argv[0]
+        basepath = sys.argv[1]
     else:
         basepath = "/"    
 
