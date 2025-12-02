@@ -57,11 +57,13 @@ def main():
 
     home_dir_path = "/home/bwalla796/workspace/github.com/bwalla796/staticsite"
     content_root = home_dir_path + "/content"
+    static_root = home_dir_path + "/static"
     public_root = home_dir_path + "/docs"
     if os.path.isdir(public_root):
         shutil.rmtree(public_root)
     os.mkdir(public_root)
     copy_dir_to_public(content_root, public_root)
+    copy_dir_to_public(static_root, public_root)
 
     generate_pages(f"{home_dir_path}/content", basepath)
 
